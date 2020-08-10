@@ -9,11 +9,11 @@ The data for training this model is taken from: https://www.kaggle.com/clmentbis
 ```python
 import requests
 
-url = 'http://localhost:9000/fake_news_prediction'
+url = 'http://localhost:9000/predict'
 data = 'the news are TRUE, we all must believe that!'
 r = requests.post(url, data)
 
-print(r.content.decode('utf-8'))
+print(r.json())
 ``` 
 `data` is where the news story is stored (as python string). At this point the usage is local, the plan is to make
 a web page to serve the predictions.

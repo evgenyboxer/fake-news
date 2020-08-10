@@ -148,3 +148,7 @@ initial_code/eda.py
 # logs
 **/logs/
 logs/
+
+# nodejs
+/node_modules/**
+/node_modules

@@ -49,7 +49,7 @@ class NNClassifier:
             self.load_model()
         return self._model
 
-    def predict(self) -> str:
+    def predict(self) -> float:
         seq = self._preprocess()
         pred = self._model.predict(seq)
-        return 'The model predicts this news piece to be fake with a {:.3f} percent confidence'.format(pred[0][0] * 100)
+        return round(float(pred[0][0]), 3)
